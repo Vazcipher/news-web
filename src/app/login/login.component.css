@@ -1,0 +1,46 @@
+p{
+    font-weight:bolder;
+    font-size: 30px;
+    margin-left: 4px;
+    margin-bottom: 1px;
+    
+}
+i{
+    margin-top: 5px;
+}
+.login-head{
+    display: flex;
+   margin-bottom: 20px;
+}
+img{
+    width: 100%;
+}
+.login{
+    width: 500px;
+    margin-left: 140px;
+}
+
+.register-tag{
+    font-size: 13px;
+    margin-top: 9px;
+    margin-left: 5px;
+   align-items: initial;
+}
+.register{
+    display: flex;
+}
+
+@media only screen and (max-width: 600px) {
+    .home-img {
+      width: 100%;
+      object-fit: cover;
+    }
+    img{
+        object-fit: cover;
+    }
+
+  }
+  .validator p{
+      color: red;
+      font-size: 13px;
+  }

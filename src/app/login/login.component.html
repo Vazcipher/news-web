@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row mt-5">
+        <div class="col col-md-6 col-12 home-img">
+            <img src="https://www.drupal.org/files/styles/grid-10/public/pannon-rtv-main%20icon_0.png?itok=ViwrMy7t" alt="">
+        </div>
+       
+        <div class="col col-md-6 col-12 mt-5">
+          <form (ngSubmit)="login()" [formGroup]="loginFrom">
+          <div class="login-head">
+              <i class="fas fa-sign-in-alt fa-2x"></i><p>Login</p>
+          </div>
+          <div class="input-group mb-3 mt-3">
+              <input type="text" class="form-control" id="username" name="username" formControlName="username" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            <div *ngIf="(this.loginFrom.get('username')?.touched || this.loginFrom.get('username')?.dirty) && (this.loginFrom.get('username')?.errors)" class="validator"><p>please use alphabets and numbers only</p></div>
+            <div class="input-group mb-3 mt-3">
+              <input type="password" class="form-control" id="password" name="password" formControlName="password" aria-controls="password" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            <div *ngIf="(this.loginFrom.get('password')?.touched || this.loginFrom.get('password')?.dirty) && (this.loginFrom.get('password')?.errors)" class="validator"><p>Password should more than 4 charectors and use alphabest and numbers only</p></div>
+            <div class="register row">
+                <div class="col col-md-2">
+                  <button type="submit" class="btn btn-dark btn-sm">Login</button>
+                </div>
+                <div class="col col-md-10">
+                  <p class="register-tag">Don't have an account?<a [routerLink]="['/RegisterComponent']" routerLinkActive="router-link-active"  href="">Register here</a></p>
+                </div>
+            </div>
+          </form>
+      </div>
+      
+    </div>
+</div>

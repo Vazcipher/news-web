@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="row mt-5 mb-1">
+        <div class="col image-part">
+            <img src="https://image.freepik.com/free-vector/news-internet-portal-application-web-banner-vector-illustration_48369-3382.jpg" alt="">
+        </div>
+        <div class="col ">
+            <div class="register">
+                <div class="content">
+                    <div class="title">
+                        <p>Sign up</p>
+                        <p><a href="">Log in</a></p>
+                    </div>
+                  
+                    <div class="input-boxes">
+                       <form (ngSubmit)="register()" [formGroup]="registerForm" action="">
+                      
+                            <div class="mobile"> 
+                                <p>Mobile Number:</p>
+                                <input type="number" class="form-control"formControlName="mobile" name="mobile" id="mobile">
+                                <div *ngIf="(this.registerForm.get('mobile')?.touched || this.registerForm.get('mobile')?.dirty) && (this.registerForm.get('mobile')?.errors)" class="validator"><p>Invalid Mobile number</p></div>
+                            </div>
+                            <div class="email">
+                                <p>Email:</p>
+                                <input type="text" class="form-control" formControlName="email" name="email" id="email">
+                                <div *ngIf="(this.registerForm.get('email')?.touched || this.registerForm.get('email')?.dirty) && (this.registerForm.get('email')?.errors)" class="validator"><p>Invalid email</p></div>
+
+                            </div>
+                            <div class="username">
+                                <p>User name:</p>
+                                <input type="text" class="form-control" formControlName="username" name="username" id="username">
+                                <div *ngIf="(this.registerForm.get('username')?.touched || this.registerForm.get('username')?.dirty) && (this.registerForm.get('username')?.errors)" class="validator"><p>Invalid Username</p></div>
+
+                            </div>
+                            <div class="password">
+                                <p>Password:</p>
+                                <input type="password" class="form-control" formControlName="password" name="password" id="password">
+                                <div *ngIf="(this.registerForm.get('password')?.touched || this.registerForm.get('password')?.dirty) && (this.registerForm.get('password')?.errors)" class="validator"><p>Password should more than 4 charectors and use alphabest and numbers only</p></div>
+
+                            </div>
+                            <div class="button">
+                                <input type="submit" value="Register">
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

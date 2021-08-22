@@ -11,6 +11,11 @@ import { EntertainmentComponent } from './entertainment/entertainment.component'
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TechnologyComponent } from './technology/technology.component';
+import { LoginComponent } from './login/login.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RegisterComponent } from './register/register.component';
+
+
 
 
 @NgModule({
@@ -19,14 +24,19 @@ import { TechnologyComponent } from './technology/technology.component';
     TopheadingComponent,
     SportsNewsComponent,
     EntertainmentComponent,
-    TechnologyComponent
+    TechnologyComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     NgxSpinnerModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule
+
   ],
   providers: [NewsApiServiceService],
   bootstrap: [AppComponent]
